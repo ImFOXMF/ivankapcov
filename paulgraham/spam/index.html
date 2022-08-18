@@ -57,6 +57,7 @@
 			</p>
 			<ul>
 				<li>
+					<pre>
 			(let  ((g (* 2 (or (gethash word good) 0)))
 			       (b (or (gethash word bad) 0)))
 			  (unless (< (+ g b) 5)
@@ -64,6 +65,7 @@
 			        (min .99 (float (/ (min 1 (/ b nbad))
 			                           (+ (min 1 (/ g ngood))
 			                              (min 1 (/ b nbad)))))))))
+					</pre>
 				</li>
 			</ul>
 			<p>
@@ -80,10 +82,12 @@
 			</p>
 			<ul>
 				<li>
+					<pre>
 			(let  ((prod (apply #'* probs)))
 			  (/ prod (+ prod (apply #'* (mapcar #'(lambda (x)
 			                                         (- 1 x))
 			                                     probs)))))
+					</pre>
 				</li>
 			</ul>
 			<p>
@@ -145,8 +149,10 @@
 			</p>
 			<ul>
 				<li>
+					<pre>
 			Привет всем. Думаю, вы должны посмотреть это:
 			http://www.27meg.com/foo
+					</pre>
 				</li>
 			</ul>
 			<p>
@@ -184,6 +190,7 @@
 			</p>
 			<ul>
 				<li>
+					<pre>
 			qvp0045
 			indira
 			mx-05
@@ -199,6 +206,7 @@
 			qves
 			7c5
 			7c266675
+					</pre>
 				</li>
 			</ul>
 			<p>
@@ -212,6 +220,7 @@
 			</p>
 			<ul>
 				<li>
+					<pre>
 			madam 0.99
 			promotion 0.99
 			republic 0.99
@@ -227,6 +236,7 @@
 			investment 0.8568143
 			very 0.14758544
 			valuable 0.82347786
+					</pre>
 				</li>
 			</ul>
 			<p>
@@ -246,6 +256,7 @@
 			</p>
 			<ul>
 				<li>
+					<pre>
 			perl 0.01
 			python 0.01
 			tcl 0.01
@@ -261,6 +272,7 @@
 			prices 0.9359873
 			managed 0.06451222
 			difficult 0.071706355
+					</pre>
 				</li>
 			</ul>
 			<p>
@@ -274,6 +286,7 @@
 			</p>
 			<ul>
 				<li>
+					<pre>
 			continuation 0.01
 			describe 0.01
 			continuations 0.01
@@ -289,6 +302,7 @@
 			spot 0.1654587
 			us-ascii 0.16804294
 			what 0.19212411
+					</pre>
 				</li>
 			</ul>
 			<p>
