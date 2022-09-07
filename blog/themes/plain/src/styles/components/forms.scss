@@ -1,0 +1,168 @@
+.form {
+  padding: 0 0 24px;
+}
+
+.form-control,
+.form-subcontrol {
+  display: block;
+}
+
+.form-inner:after,
+.form-part:after,
+.form-control:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.form-label {
+  float: left;
+  width: 17.07%;
+  padding: 0 20px 0 0;
+  line-height: 18px;
+  margin-top: 2px;
+  word-wrap: break-word;
+}
+
+.form-label-sticky {
+  position: sticky;
+  -webkit-font-smoothing: subpixel-antialiased;
+  background: var(--backgroundColor);
+  top: 6px;
+}
+
+.form-element {
+  margin-left: 17.07%;
+  margin-bottom: 4px;
+  width: 82.93%;
+}
+
+.form-element-toggled {
+
+}
+.form-element-toggled_hidden {
+  display: none;
+}
+
+.form-control-sublabel {
+  margin: 4px 0 8px;
+  width: 82.93%;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.form-part { padding: 0 0 24px 0 }
+
+.form-control { padding: 0 0 12px 0 }
+
+.form-label p { margin: 0 0 8px }
+
+.form-control .input-label { margin-top: 8px }
+
+.form-control .disabled { color: #999; }
+
+.form-control-big .input-label { margin-top: 14px }
+.form-control-big input[type="text"] { font-size: 24px }
+
+.form-subcontrol { padding: 0 0 8px 0 }
+
+.form-control .full-width { width: 100%; }
+.form-control .width-4 { width: 80%; }
+.form-control .width-3 { width: 60%; }
+.form-control .width-2 { width: 40%; }
+.form-control .width-1 { width: 20%; }
+
+.form-control .height-2 { height: 60px; min-height: 60px }
+.form-control .height-4 { height: 108px; min-height: 108px }
+.form-control .height-8 { height: 204px; min-height: 204px }
+.form-control .height-16 { height: 396px; min-height: 396px }
+
+.form-control .icon {
+  position: relative;
+  left: -.33em;
+  width: 0;
+}
+
+.form-control .icon span.e2-svgi {
+  position: absolute;
+  right: 0;
+  top: 6px;
+}
+
+.form-label-saveinfo {
+  font-family: var(--smallFontFamily);
+  font-size: var(--smallFontSize);
+  line-height: var(--smallLineHeight);
+  margin: 4px 0 0;
+}
+
+.delete-box {
+  border-radius: 6px;  
+  background: #ec6040;
+  padding: 20px 0 40px 0;
+  color: #fff;
+}
+
+.form-control .logo-marginal,
+.form-control .logo {
+  position: relative;
+  left: auto;
+  top: auto;
+  transform: none;
+  margin: 0;
+}
+
+@media #{$AreFormsVertical} {
+  .form-control .form-label {
+    width: 100%;
+    padding: 0 0 6px 0;
+    vertical-align: baseline;
+    margin: 0;
+  }
+
+  .form-control .input-label {
+    margin: 0;
+  }
+
+  .form-control .form-label-sticky {
+    background: var(--backgroundTransparentColor);
+    -webkit-backdrop-filter: blur(8px);
+    margin-top: -6px;
+    padding-top: 6px;
+    top: 0;
+  }
+
+  .form-label label {
+    color: var(--boldColor);
+    font-weight: bold;
+  }
+
+  .form-label-saveinfo {
+    float: right;
+    display: inline-block;
+    margin: 0 0 0 1em;
+    vertical-align: baseline;
+  }
+
+  .form-element,
+  .form-control-sublabel {
+    width: 100%;
+    margin-left: 0;
+  }
+  
+  .delete-box {
+    width: 100%;
+    padding: 20px 4% 40px;
+  }
+
+  .width-2, .width-3, .width-4 {
+    width: 100% !important;
+  }
+
+}
+
+@media #{$AreFormControlsFullWidth} {
+  .width-2, .width-3, .width-4 {
+    width: 100% !important;
+  }
+}

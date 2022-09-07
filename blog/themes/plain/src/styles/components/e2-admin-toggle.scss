@@ -1,0 +1,36 @@
+.e2-toggle-state-on,
+.e2-toggle-state-off,
+.e2-toggle-state-thinking {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  transform: scale(0.001) rotate(90deg);
+  transition: opacity var(--time) ease-out, transform var(--time) ease-out;
+}
+.e2-toggle-state-off {
+  opacity: 1;
+  transform: scale(1);
+}
+.e2-toggle-state-on,
+.e2-toggle-state-thinking {
+  opacity: 0;
+  transform: scale(0.001);
+}
+.e2-toggle-state-thinking {
+  color: var(--disabledColor);
+  cursor: default;
+}
+
+.e2-admin-item_on .e2-toggle-state-off,
+.e2-admin-item_thinking .e2-toggle-state-off {
+  opacity: 0;
+  transform: scale(0.001);
+}
+.e2-admin-item_on .e2-toggle-state-on,
+.e2-admin-item_thinking .e2-toggle-state-thinking {
+  opacity: 1;
+  transform: scale(1);
+}

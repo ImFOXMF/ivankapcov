@@ -1,0 +1,243 @@
+input[type="text"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+textarea,
+select,
+.e2-button {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  padding: 6px;
+  box-shadow: none;
+  transition-property: background, border-color, box-shadow, fill;
+  transition-duration: var(--time);
+  transition-timing-function: ease-out;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+textarea,
+select {
+  vertical-align: baseline;
+  border: none;
+  background: var(--inputBackgroundColor);
+  color: var(--inputTextColor);
+  border-radius: var(--borderRadius);
+}
+
+input[type="text"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+textarea,
+select {
+  &.e2-livecheckable { color: var(--inputTextColor) }
+  &.e2-verified { color: var(--verifiedColor) }
+  &.e2-wrong { color: var(--errorColor) }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+textarea {
+  resize: vertical;
+  display: block;
+}
+
+select {
+  -webkit-appearance: none;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  margin: 0;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus,
+select:focus,
+.e2-button:focus {
+  transition: none;
+}
+
+select > .e2-button {
+  display: none;
+}
+
+.e2-button {
+  display: inline-block;
+  padding: 6px 16px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+  background: #f4f4f4;
+  background: linear-gradient(to bottom, #f8f8f8 0%, #f0f0f0 100%);
+  white-space: nowrap;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 rgba(255, 255, 255, 0), inset 0 0 1px rgba(0, 0, 0, .5);
+  border-radius: var(--borderRadius);
+  color: #000;
+
+  &:visited, &:active, &:hover, &.hover {
+    color: #000;
+  }
+
+  &:active, &:hover, &.hover {
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, .12), inset 0 0 1px rgba(0, 0, 0, .5);
+  }
+
+  &:hover, &.hover {
+    transition: none;
+  }
+
+  &:focus {
+    box-shadow: inset 0 0 0 0 rgba(255, 255, 255, 0), inset 0 0 0 1px rgba(0,0,0,.2);
+  }
+
+  &:focus:hover, &:focus.hover {
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, .12), inset 0 0 0 1px rgba(0,0,0,.2);
+  }
+
+  &_transparent {
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 0;
+    text-align: left;
+
+    &:active, &:hover, &.hover, &:focus, &:focus:hover, &:focus.hover {
+      box-shadow: none;
+    }
+  }
+
+}
+
+.e2-submit-button,
+.e2-delete-button {
+  font-size: 16px;
+  line-height: 24px;
+  padding: 12px 24px;
+  font-size: var(--bigButtonFontSize);
+  line-height: var(--bigButtonLineHeight);
+  padding: 16px 32px;
+  font-weight: bold;
+}
+
+.e2-submit-button {
+  background: #e87840;
+  background: linear-gradient(to bottom, #f88850 0%, #d86830 100%);
+  color: #fff;
+
+  &:visited, &:active, &:hover, &.hover {
+    color: #fff;
+  }
+
+}
+
+.e2-delete-button {
+  background: #eaded8;
+  background: linear-gradient(to bottom, #f4ece8 0%, #e0d0c8 100%);
+  color: #000;
+
+  &:visited, &:active, &:hover, &.hover {
+    color: #000;
+  }
+
+}
+
+.e2-button:disabled {
+  color: rgba(0, 0, 0, .2);
+  cursor: default;
+  pointer-events: none;
+}
+
+.e2-keyboard-shortcut {
+  padding: 0 .5em;
+  border-radius: 3px;
+  text-decoration: none;
+  font-family: var(--smallFontFamily);
+  font-size: var(--smallFontSize);
+  line-height: var(--smallLineHeight);
+  visibility: hidden;
+
+  &_visible {
+    visibility: visible;
+  }
+}
+
+.e2-button+.e2-keyboard-shortcut {
+  margin-left: .67em;
+  font-weight: normal;
+}
+
+.e2-keyboard-shortcut:empty {
+  display: none;
+}
+
+.e2-clickable-keyboard-shortcut {
+  opacity: 1;
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 0;
+  text-decoration: none;
+  cursor: pointer;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: inherit;
+  border-bottom-style: dashed;
+  color: var(--adminColor);
+  border-color: var(--linkUnderlineColor);
+  transition-property: (border-bottom, border-color, background, color, fill);
+  transition-duration: var(--time);
+  transition-timing-function: ease-out;
+}
+
+.e2-clickable-keyboard-shortcut:hover,
+.e2-clickable-keyboard-shortcut.hover {
+  color: var(--hoverColor);
+  border-color: var(--hoverUnderlineColor);
+  transition: none;
+}
+
+.e2-pseudolink {
+  text-decoration: none;
+  border-width: 0 0 1px 0;
+  border-style: dashed;
+  border-color: var(--thinRuleColor);
+  transition-property: color, border-color;
+  transition-duration: var(--time);
+  transition-timing-function: ease-out;
+}
+
+.e2-visual-login {
+  display: inline-block;
+  margin: 4px 0;
+
+  &_hidden {
+    visibility: hidden;
+  }
+}

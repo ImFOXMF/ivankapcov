@@ -1,0 +1,163 @@
+$thin: 0.85;
+$backgroundColor: #fff;
+$foregroundColor: #000;
+$headingsColor: #000;
+$linkColor: #0060a0;
+$linkColorVisited: #70a0b0;
+$tagColor: #556677;
+$hoverColor: #b03000;
+$engineTextColor: #a0a0a0;
+$adminColor: #009030;
+
+$ArePagesMultiline: 'screen and (max-width: 375px)';
+
+$AreCommentsVertical: 'screen and (max-width: 735px)';
+$AreGalleriesVertical: 'screen and (max-width: 735px)';
+$AreRelatedVertical: 'screen and (max-width: 735px)';
+$AreFormsVertical: 'screen and (max-width: 735px)';
+$IsSearchHeadingFullWidth: 'screen and (max-width: 735px)';
+$AreWindowsFullWidth: 'screen and (max-width: 735px)';
+
+$AreFormControlsFullWidth: 'screen and (max-width: 1023px)';
+$AreTextIndentsProportional: 'screen and (max-width: 1023px)';
+$DoTextObjectsNeedOverflowScroll: 'screen and (max-width: 1023px)';
+$DoIconsHaveExtraMargin: 'screen and (max-width: 1023px)';
+$IsCompact: 'screen and (max-width: 1023px)';
+
+:root {
+
+  --backgroundColor: #{$backgroundColor};
+  --backgroundTransparentColor: #{transparentize($backgroundColor, 0.2)};
+  --sheetBackgroundColor: rgba(240,240,240,0.8);
+
+  --foregroundColor: #{$foregroundColor};
+  --thinRuleColor: #{transparentize($foregroundColor, $thin)};
+
+  --headingsColor: #{$headingsColor};
+  --headingsUnderlineColor: #{transparentize($headingsColor, $thin)};
+  --boldColor: #{$headingsColor};
+  --boldUnderlineColor: #{transparentize($headingsColor, $thin)};
+  --linkColor: #{$linkColor};
+  --linkUnderlineColor: #{transparentize($linkColor, $thin)};
+  --linkColorVisited: #{$linkColorVisited};
+  --linkUnderlineColorVisited: #{transparentize($linkColorVisited, $thin)};
+  --hoverColor: #{$hoverColor};
+  --hoverUnderlineColor: #{transparentize($hoverColor, $thin)};
+  --tagColor: #{$tagColor};
+  --tagUnderlineColor: #{transparentize($headingsColor, $thin)};
+  --adminColor: #{$adminColor};
+  --adminUnderlineColor: #{transparentize($adminColor, $thin)};
+  --engineTextColor: #{$engineTextColor};
+  --engineTextUnderlineColor: #{transparentize($engineTextColor, $thin)};
+
+  --markedTextBackground: #fffada;
+  --markedImageBorderColor: #fff8b8;
+
+  --inputBackgroundColor: #f0f0f0;
+  --inputTextColor: #000;
+
+  --imageBorderColor: #e8e8e8;
+  --disabledColor: #cccccc;
+  --activeColor: #ff3000;
+  --verifiedColor: #009900;
+  --errorColor: #b03000;
+  --currentItemBackgroundColor: #e8e8e8;
+  --windowBackgroundColor: #fff;
+  --unsavedIndicatorColor: #b03000;
+
+  // to match .likely
+  --subscribeButtonBackground: rgba(231,231,231,.8);
+  --subscribeButtonHoverBackground: rgba(212,212,212,.8);
+  --subscribeButtonTextColor: #000;
+
+  // to match .likely-light
+  /* --subscribeButtonBackground: rgba(236,236,236,.16); */
+  /* --subscribeButtonHoverBackground: rgba(255,255,255,.48); */
+  /* --subscribeButtonTextColor: #fff; */
+
+  --maxWidth: 1280px;
+  --marginTop: 48px;
+  --marginLeft: 9%;
+  --marginRight: 9%;
+  --marginTopCompact: 16px;
+  --marginLeftCompact: 4%;
+  --marginRightCompact: 4%;
+
+  --displayLogoMarginal: block;
+  --displayLogo: none;
+  --displayLogoCompact: block;
+
+  --columnSpacing: 15px;
+
+  --borderRadius: 6px;
+
+  --logoTop: -20px;
+  --logoSize: 40px;
+  --blogTitleFontSize: 16px;
+  --blogTitleLineHeight: 24px;
+  --subHeadingFontSize: 26px;
+  --subHeadingLineHeight: 32px;
+  --pageHeadingFontSize: 36px;
+  --pageHeadingLineHeight: 40px;
+  --noteTitleFontSize: 36px;
+  --noteTitleLineHeight: 40px;
+  --noteTitleFavouriteFontSize: 36px;
+  --noteTitleFavouriteLineHeight: 40px;
+  --noteTextFontSize: 16px;
+  --noteTextLineHeight: 24px;
+  --smallFontSize: 12px;
+  --smallLineHeight: 16px;
+  --bigButtonFontSize: 20px;
+  --bigButtonLineHeight: 28px;
+
+  --mainFontFamily: system-ui, -apple-system, BlinkMacSystemFont, "SF UI Text", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  --noteMainFontFamily: inherit;
+  --smallFontFamily: inherit;
+
+  --time: .2s;
+  --timeLong: .33s;
+
+}
+
+@media (prefers-color-scheme: dark) {
+  :root .e2-responds-to-dark-mode {
+
+    --backgroundColor:             rgb(  32,  32,  32      );
+    --backgroundTransparentColor: rgba(  32,  32,  32, .8  );
+    --sheetBackgroundColor:       rgba(  40,  40,  40, .8  );
+    
+    --foregroundColor:             rgb( 192, 192, 192      );
+    --thinRuleColor:              rgba( 192, 192, 192, .25 );
+    
+    --headingsColor:               rgb( 255, 255, 255      );
+    --headingsUnderlineColor:     rgba( 255, 255, 255, .25 );
+    --boldColor:                     var(--foregroundColor);
+    --boldUnderlineColor:            var(--thinRuleColor);
+    --linkColor:                   rgb(   0, 128, 212      );
+    --linkUnderlineColor:         rgba(   0, 128, 212, .25 );
+    --linkColorVisited:            rgb(  64,  96, 144      );
+    --linkUnderlineColorVisited:  rgba(  64,  96, 144, .25 );
+    --hoverColor:                  rgb( 240,  64,  32);
+    --hoverUnderlineColor:        rgba( 240,  64,  32, .25 );
+    
+    --adminColor:                  rgb(  76, 178, 110);
+    --adminUnderlineColor:        rgba(  76, 178, 110, .25 );
+    --engineTextColor:             rgb( 128, 128, 128      );
+    --engineTextUnderlineColor:   rgba( 128, 128, 128, .25 );
+
+    --markedTextBackground:           #443300;
+    --markedImageBorderColor:         #886600;
+
+    --inputBackgroundColor:           #404040;
+    --inputTextColor:                var(--foregroundColor);
+
+    --imageBorderColor:               #404040;
+    --disabledColor:               rgb(  96,  96,  96      );
+    --activeColor:                   var(--headingsColor);
+    --errorColor:                  rgb( 240,  64,  32);
+    --verifiedColor:               rgb(   64, 192, 32);
+    --currentItemBackgroundColor:     #303030;
+    --windowBackgroundColor:          #303030;
+
+  }
+}

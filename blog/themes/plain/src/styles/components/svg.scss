@@ -1,0 +1,50 @@
+svg {
+  fill: currentColor;
+  stroke: currentColor;
+}
+
+.e2-svgi {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  font-size: 0;
+  line-height: 0;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+  text-indent: 0;
+
+  &_30 {
+    position: absolute;
+    top: 7px;
+    left: 7px;
+  }
+
+  &_40 {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+  }
+}
+
+.e2-svgi-calendar {
+  width: 17px;
+  height: 13px;
+}
+
+.e2-svgi-smaller {
+  width: 12px;
+  height: 12px;
+  top: -2px;
+}
+
+.e2-svgi-heading {
+  width: 36px;
+  height: 36px;
+  top: 4px;
+}
+
+.e2-svgi-double {
+  width: 32px;
+  height: 32px;
+}

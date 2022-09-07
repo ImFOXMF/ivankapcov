@@ -1,0 +1,7 @@
+.e2-progress {
+  transition: stroke-dashoffset .5s ease-out;
+
+  &_notransition {
+    transition: none;
+  }
+}

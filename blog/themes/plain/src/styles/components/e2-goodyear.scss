@@ -1,0 +1,20 @@
+.goodyear-container .goodyear-icon {
+  right: 6px;
+}
+.goodyear-container .goodyear-icon div {
+  border-color: var(--inputTextColor);
+  transition-property: border-color;
+  transition-duration: var(--time);
+  transition-timing-function: ease-out;
+}
+
+.goodyear-container .goodyear-icon:hover div,
+.goodyear-container .goodyear-icon.hover div {
+  transition: none;
+  border-color: var(--hoverColor);
+}
+
+.goodyear-error input {
+  background: #ffece0
+}
+

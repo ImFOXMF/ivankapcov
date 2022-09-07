@@ -1,0 +1,213 @@
+.e2-popup-menu {
+  user-select: none;
+}
+.e2-popup-menu_open {
+  z-index: 101;
+}
+.e2-popup-menu-button,
+.e2-popup-menu-button:active,
+.e2-popup-menu-button:hover,
+.e2-popup-menu-button.hover,
+.e2-popup-menu-button:focus,
+.e2-popup-menu-button:focus:hover,
+.e2-popup-menu-button:focus.hover {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 0;
+  text-align: left;
+  cursor: pointer;
+  fill: none;
+}
+.e2-popup-menu-button-text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  text-indent: -100em;
+}
+.e2-popup-menu-button-icon {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 16px;
+  height: 16px;
+  line-height: 0;
+  color: var(--adminColor);
+  transition: color var(--time) ease-out;
+}
+.e2-popup-menu-button:hover .e2-popup-menu-button-icon,
+.e2-popup-menu-button.hover .e2-popup-menu-button-icon,
+.e2-popup-menu-button:focus .e2-popup-menu-button-icon,
+.e2-popup-menu-button:focus:hover .e2-popup-menu-button-icon,
+.e2-popup-menu-button:focus.hover .e2-popup-menu-button-icon,
+.e2-popup-menu-button:active .e2-popup-menu-button-icon {
+  color: var(--hoverColor);
+  transition: none;
+}
+.e2-popup-menu-widget {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  margin: -5px 0 40px;
+  padding: 4px 0;
+  background: var(--windowBackgroundColor);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  border-radius: var(--borderRadius);
+  text-align: left;
+  min-width: 180px;
+  max-width: 280px;
+  display: none;
+}
+.e2-uploaded-image-popup-menu .e2-popup-menu-widget {
+  top: auto;
+  bottom: 100%;
+  right: auto;
+  left: 0;
+  margin: 0 0 4px;
+}
+.e2-popup-menu_open .e2-popup-menu-widget {
+  display: block;
+  visibility: hidden;
+}
+.e2-popup-menu_visible .e2-popup-menu-widget {
+  visibility: visible;
+}
+.e2-popup-menu_widgetfrombottom .e2-popup-menu-widget {
+  top: auto;
+  bottom: 100%;
+  margin-bottom: 0;
+}
+.e2-popup-menu_widgetfromright .e2-popup-menu-widget {
+  left: auto;
+  right: 0;
+}
+.e2-popup-menu-widget .e2-popup-menu-widget-item,
+.e2-popup-menu-widget .e2-popup-menu-widget-item:link,
+.e2-popup-menu-widget .e2-popup-menu-widget-item:active,
+.e2-popup-menu-widget .e2-popup-menu-widget-item:visited,
+.e2-popup-menu-widget .e2-popup-menu-widget-item:focus,
+.e2-popup-menu-widget .e2-popup-menu-widget-item:focus:hover,
+.e2-popup-menu-widget .e2-popup-menu-widget-item:focus.hover {
+  // should not need .e2-popup-menu-widget in the beginning, put without it
+  // menu item color (--foregroundColor) get overwritten with .admin-links stuff,
+  // and it turned out not to be easy to fix
+  text-align: left;
+  border: 0;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: 100%;
+  line-height: 1;
+  position: relative;
+  cursor: pointer;
+  color: var(--foregroundColor);
+  background-color: transparent;
+  transition: background-color var(--time) ease-out, color var(--time) ease-out;
+}
+.e2-popup-menu-widget .e2-popup-menu-widget-item:hover,
+.e2-popup-menu-widget .e2-popup-menu-widget-item.hover {
+  // should not need .e2-popup-menu-widget in the beginning, put without it
+  // menu item color (--foregroundColor) get overwritten with .admin-links stuff,
+  // and it turned out not to be easy to fix
+  background-color: var(--sheetBackgroundColor);
+  color: var(--foregroundColor);
+  transition: none;
+}
+.e2-popup-menu-widget-item_extended:after {
+  content: attr(data-extend);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #ff00ff;
+}
+.e2-popup-menu-widget-item_disabled,
+.e2-popup-menu-widget-item_disabled:link,
+.e2-popup-menu-widget-item_disabled:active,
+.e2-popup-menu-widget-item_disabled:focus,
+.e2-popup-menu-widget-item_disabled:focus:hover,
+.e2-popup-menu-widget-item_disabled:focus.hover,
+.e2-popup-menu-widget-item_disabled:visited,
+.e2-popup-menu-widget-item_disabled:hover,
+.e2-popup-menu-widget-item_disabled.hover {
+  background-color: transparent;
+  color: var(--disabledColor);
+  cursor: default;
+  transition: none;
+}
+.e2-popup-menu-widget-item_remove,
+.e2-popup-menu-widget-item_remove:link,
+.e2-popup-menu-widget-item_remove:active,
+.e2-popup-menu-widget-item_remove:focus,
+.e2-popup-menu-widget-item_remove:focus:hover,
+.e2-popup-menu-widget-item_remove:focus.hover,
+.e2-popup-menu-widget-item_remove:visited {
+  color: var(--errorColor);
+}
+.e2-popup-menu-widget-item_remove.hover,
+.e2-popup-menu-widget-item_remove:hover {
+  color: var(--errorColor);
+}
+.e2-popup-menu-widget-item_info,
+.e2-popup-menu-widget-item_info:link,
+.e2-popup-menu-widget-item_info:active,
+.e2-popup-menu-widget-item_info:focus,
+.e2-popup-menu-widget-item_info:focus:hover,
+.e2-popup-menu-widget-item_info:focus.hover,
+.e2-popup-menu-widget-item_info:visited,
+.e2-popup-menu-widget-item_info:hover,
+.e2-popup-menu-widget-item_info.hover {
+  margin-bottom: -4px;
+  background-color: transparent;
+  color: var(--disabledColor);
+  cursor: default;
+  transition: none;
+}
+.e2-popup-menu-widget-item-icon {
+  position: absolute;
+  top: 11px;
+  left: 12px;
+  width: 16px;
+  height: 16px;
+  font-size: 0;
+  line-height: 0;
+}
+.e2-popup-menu-widget-item-text {
+  display: block;
+  max-width: 280px;
+  padding: 10px 40px 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.e2-popup-menu-widget-item_extended .e2-popup-menu-widget-item-text {
+  padding-right: 20px;
+  margin-right: 40px;
+  min-height: 200px;
+}
+.e2-popup-menu-widget-item-text-row {
+  display: block;
+  line-height: 1.25;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.e2-popup-menu-widget-separator {
+  height: 0;
+  width: auto;
+  margin: 0.5em 0 -1px 40px;
+  padding: 0 0 0.5em;
+  border: 0;
+  border-top: 1px solid var(--thinRuleColor);
+}

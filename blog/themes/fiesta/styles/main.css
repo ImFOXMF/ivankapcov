@@ -1,0 +1,158 @@
+:root {
+    
+  --backgroundColor:             rgb(255, 248, 252);
+  --backgroundTransparentColor: rgba(255, 255, 255, 0.8);
+  --sheetBackgroundColor:       rgba(212, 255, 246, 0.8);
+
+  --foregroundColor:             rgb(64, 48, 144);
+  --thinRuleColor:              rgba(64, 48, 144, 0.12);
+
+  --headingsColor:               rgb(255, 0, 160);
+  --headingsUnderlineColor:     rgba(255, 0, 160, .25 );
+  --boldColor:                     var(--headingsColor);
+  --boldUnderlineColor:            var(--headingsUnderlineColor);
+  --linkColor:                   rgb(48, 138, 240);
+  --linkUnderlineColor:         rgba(48, 138, 240, .25);
+  --linkColorVisited:            rgb(171, 80, 224);
+  --linkUnderlineColorVisited:  rgba(171, 80, 224, .12);
+  --hoverColor:                  rgb(64, 212, 255);
+  --hoverUnderlineColor:        rgba(64, 212, 255, .12);
+  --tagColor:                    rgb(17, 192, 104);
+  --tagUnderlineColor:          rgba(17, 192, 104, .12);
+  --adminColor:                  rgb(255, 81, 0);
+  --adminUnderlineColor:        rgba(255, 81, 0, .12);
+  --engineTextColor:               var(--foregroundColor);
+  --engineTextUnderlineColor:      var(--thinRuleColor);
+
+  --markedTextBackground:        rgb( 255, 242, 128);
+  --markedImageBorderColor:      rgb( 255, 242, 128);
+
+  --inputBackgroundColor: #d5fffd;
+  --inputTextColor:              var(--foregroundColor);
+
+  /* --imageBorderColor */
+  /* --disabledColor */
+  /* --activeColor */
+  /* --errorColor */
+  /* --currentItemBackgroundColor */
+  --windowBackgroundColor:             rgb( 255, 255, 255);
+  /* --unsavedIndicatorColor */
+  
+  /* to match .likely */
+  --subscribeButtonBackground: rgb(148, 212, 64);
+  --subscribeButtonHoverBackground: rgb(151, 238, 37);
+  --subscribeButtonTextColor: #fff;
+
+  /* to match .likely-light */
+  /* --subscribeButtonBackground: rgba(236,236,236,.16); */
+  /* --subscribeButtonHoverBackground: rgba(255,255,255,.48); */
+  /* --subscribeButtonTextColor: #fff; */
+  
+  --marginTop: 48px;
+  --marginLeft: 6%;
+  --marginRight: 6%;
+  --marginTopCompact: 14px;
+  --marginLeftCompact: 3%;
+  --marginRightCompact: 3%;
+
+  --displayLogoMarginal: none;
+  --displayLogo: block;
+  --displayLogoCompact: block;
+
+  /* --columnSpacing */
+
+  --logoTop: -8px;
+  --blogTitleFontSize: 28px;
+  --blogTitleLineHeight: 32px;
+  --pageHeadingFontSize: 36px;
+  --pageHeadingLineHeight: 42px;
+  --noteTitleFontSize: 36px;
+  --noteTitleLineHeight: 42px;
+  --noteTitleFavouriteFontSize: 36px;
+  --noteTitleFavouriteLineHeight: 42px;
+  --noteTextFontSize: 20px;
+  --noteTextLineHeight: 28px;
+
+  /* --mainFontFamily: "Helvetica Neue", "Helvetica", "Arial", sans-serif; */
+  /* --noteMainFontFamily: Georgia, serif; */
+  /* --smallFontFamily */
+
+  --time: 1.333s;
+
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root .e2-responds-to-dark-mode {
+
+    --backgroundColor:             rgb(38, 33, 43);
+    --backgroundTransparentColor: rgba(0, 0, 0, 0.8);
+    --sheetBackgroundColor:       rgba(24, 47, 42, 0.8);
+
+    --foregroundColor:             rgb(234, 200, 234);
+    --thinRuleColor:              rgba(234, 200, 234, .25);
+    
+    --headingsColor:               rgb(255, 64, 185);
+    --headingsUnderlineColor:     rgba(255, 64, 185, 0.25);
+    --boldColor:                     var(--headingsColor);
+    --boldUnderlineColor:            var(--headingsUnderlineColor);
+    --linkColor:                   rgb(144, 173, 255);
+    --linkUnderlineColor:         rgba(144, 173, 255, .25 );
+    --linkColorVisited:            rgb(203, 139, 255);
+    --linkUnderlineColorVisited:  rgba(184, 97, 255, .12 );
+    --hoverColor:                  rgb(64, 212, 255);
+    --hoverUnderlineColor:        rgba(64, 212, 255, .12);
+    --tagColor:                    rgb(17, 192, 104);
+    --tagUnderlineColor:          rgba(17, 192, 104, .12);
+    --adminColor:                  rgb(255, 153, 0);
+    --adminUnderlineColor:        rgba(255, 153, 0, .12);
+    --engineTextColor:               var(--foregroundColor);
+    --engineTextUnderlineColor:      var(--thinRuleColor);
+
+    --markedTextBackground:           #443300;
+    --markedImageBorderColor:         #886600;
+
+    --inputBackgroundColor:           #253542;
+    --inputTextColor:              var(--foregroundColor);
+
+
+    --activeColor:                   var(--headingsColor);
+    --errorColor:                  rgb( 240,  40,  32);
+    --verifiedColor:               rgb(   40, 192, 32);
+
+    --windowBackgroundColor:       rgba(61, 82, 77, 0.8);
+
+  }
+}
+
+.e2-text .lead {
+  color: var(--tagColor);
+  color: #8e33f5;
+  font-weight: bold;
+}
+
+.e2-text .loud {
+  background-color: #d9ff00;
+  color: #000;
+  font-family: var(--mainFontFamily);
+  font-weight: bold;
+  font-size: 54px;
+  line-height: 56px;
+  max-width: 720px;  
+  padding: .4em 0 .8em;
+  border: none;
+  border-radius: 0.4em;
+  box-shadow: -0.4em 0 0 #d9ff00, 0.4em 0 0 #d9ff00;
+  margin: 20px 0 40px;
+}
+
+.e2-text .foot {
+  color: #fff;
+  font-weight: bold;
+}
+
+@media (prefers-color-scheme: dark) {
+  .e2-text .loud {
+    color: var(--backgroundColor);
+  }
+}
